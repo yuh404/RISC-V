@@ -1,0 +1,54 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.srcs/sources_1/new/completer_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module completer_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.srcs/sources_1/new/Requester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Requester
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_completer_1_0_0/sim/design_3_completer_1_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_completer_1_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_Requester_0_0/sim/design_3_Requester_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_Requester_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_clk_wiz_0/design_3_clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_clk_wiz_0/design_3_clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_clk_wiz_1_0/design_3_clk_wiz_1_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_clk_wiz_1_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_clk_wiz_1_0/design_3_clk_wiz_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_clk_wiz_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_design_FIFO_test_0_0/src/design_FIFO_test_clk_wiz_0_0/design_FIFO_test_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_FIFO_test_clk_wiz_0_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_design_FIFO_test_0_0/src/design_FIFO_test_clk_wiz_0_0/design_FIFO_test_clk_wiz_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_FIFO_test_clk_wiz_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_design_FIFO_test_0_0/src/design_FIFO_test_clk_wiz_1_0/design_FIFO_test_clk_wiz_1_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_FIFO_test_clk_wiz_1_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_design_FIFO_test_0_0/src/design_FIFO_test_clk_wiz_1_0/design_FIFO_test_clk_wiz_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_FIFO_test_clk_wiz_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ipshared/50bd/src/fifo2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo2
+INFO: [VRFC 10-311] analyzing module fifomem
+INFO: [VRFC 10-311] analyzing module async_cmp
+INFO: [VRFC 10-311] analyzing module rptr_empty
+INFO: [VRFC 10-311] analyzing module wptr_full
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ipshared/50bd/sim/design_FIFO_test_fifo2_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_FIFO_test_fifo2_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ipshared/50bd/src/LENGTH.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LENGTH
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ipshared/50bd/sim/design_FIFO_test_LENGTH_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_FIFO_test_LENGTH_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ipshared/50bd/src/READY_CONDITION.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module READY_CONDITION
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ipshared/50bd/sim/design_FIFO_test_READY_CONDITION_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_FIFO_test_READY_CONDITION_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ipshared/50bd/src/STOP_WRINC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module STOP_WRINC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ipshared/50bd/sim/design_FIFO_test_STOP_WRINC_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_FIFO_test_STOP_WRINC_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ipshared/50bd/sim/design_FIFO_test_fifo2_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_FIFO_test_fifo2_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ipshared/50bd/sim/design_FIFO_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_FIFO_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/ip/design_3_design_FIFO_test_0_0/sim/design_3_design_FIFO_test_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_design_FIFO_test_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.ip_user_files/bd/design_3/sim/design_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SoC examples/project_1/project_1.gen/sources_1/bd/design_3/hdl/design_3_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_3_wrapper

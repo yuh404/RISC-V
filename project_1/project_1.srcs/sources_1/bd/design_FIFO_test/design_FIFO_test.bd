@@ -1,0 +1,683 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xBC6FAB207E2CC3CC",
+      "device": "xc7a12ticsg325-1L",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/design_FIFO_test",
+      "name": "design_FIFO_test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "fifo2_0": "",
+      "clk_wiz_req": "",
+      "clk_wiz_com": "",
+      "LENGTH_0": "",
+      "READY_CONDITION_0": "",
+      "STOP_WRINC_0": "",
+      "fifo2_1": ""
+    },
+    "ports": {
+      "wdata_0": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "winc_0": {
+        "direction": "I"
+      },
+      "wrst_n_0": {
+        "direction": "I"
+      },
+      "rrst_n_0": {
+        "direction": "I"
+      },
+      "rdata_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "wfull_0": {
+        "direction": "O"
+      },
+      "rempty_0": {
+        "direction": "O"
+      },
+      "clk_100MHz": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_FIFO_test_clk_100MHz",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset_rtl_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "clk_50MHz_1": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_FIFO_test_clk_100MHz_1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset_rtl_0_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "locked_0": {
+        "direction": "O"
+      },
+      "locked_1": {
+        "direction": "O"
+      },
+      "RD_0": {
+        "direction": "I"
+      },
+      "length_0": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "rd_out_0": {
+        "direction": "O"
+      },
+      "wr_out_0": {
+        "direction": "O"
+      },
+      "READY_0": {
+        "direction": "O"
+      },
+      "wdata_1": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "rinc_0": {
+        "direction": "I"
+      },
+      "rdata_1": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "wfull_1": {
+        "direction": "O"
+      },
+      "rempty_1": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "fifo2_0": {
+        "vlnv": "xilinx.com:module_ref:fifo2:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_FIFO_test_fifo2_0_0",
+        "xci_path": "ip\\design_FIFO_test_fifo2_0_0\\design_FIFO_test_fifo2_0_0.xci",
+        "inst_hier_path": "fifo2_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fifo2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rdata": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "wfull": {
+            "direction": "O"
+          },
+          "rempty": {
+            "direction": "O"
+          },
+          "wdata": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "winc": {
+            "direction": "I"
+          },
+          "wclk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_req_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "wrst_n": {
+            "direction": "I"
+          },
+          "rinc": {
+            "direction": "I"
+          },
+          "rclk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_com_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rrst_n": {
+            "direction": "I"
+          }
+        }
+      },
+      "clk_wiz_req": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "17",
+        "xci_name": "design_FIFO_test_clk_wiz_0_0",
+        "xci_path": "ip\\design_FIFO_test_clk_wiz_0_0\\design_FIFO_test_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_req",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "clk_wiz_com": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "17",
+        "xci_name": "design_FIFO_test_clk_wiz_1_0",
+        "xci_path": "ip\\design_FIFO_test_clk_wiz_1_0\\design_FIFO_test_clk_wiz_1_0.xci",
+        "inst_hier_path": "clk_wiz_com",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "130.958"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "100"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "10.000"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "LENGTH_0": {
+        "vlnv": "xilinx.com:module_ref:LENGTH:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_FIFO_test_LENGTH_0_0",
+        "xci_path": "ip\\design_FIFO_test_LENGTH_0_0\\design_FIFO_test_LENGTH_0_0.xci",
+        "inst_hier_path": "LENGTH_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "LENGTH",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_com_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "RD": {
+            "direction": "I"
+          },
+          "WR": {
+            "direction": "I"
+          },
+          "rempty": {
+            "direction": "I"
+          },
+          "wfull": {
+            "direction": "I"
+          },
+          "length": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "rinc": {
+            "direction": "O"
+          },
+          "winc": {
+            "direction": "O"
+          },
+          "rd_out": {
+            "direction": "O"
+          },
+          "wr_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "READY_CONDITION_0": {
+        "vlnv": "xilinx.com:module_ref:READY_CONDITION:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_FIFO_test_READY_CONDITION_0_0",
+        "xci_path": "ip\\design_FIFO_test_READY_CONDITION_0_0\\design_FIFO_test_READY_CONDITION_0_0.xci",
+        "inst_hier_path": "READY_CONDITION_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "READY_CONDITION",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "wfull": {
+            "direction": "I"
+          },
+          "WR": {
+            "direction": "I"
+          },
+          "rempty": {
+            "direction": "I"
+          },
+          "RD": {
+            "direction": "I"
+          },
+          "rinc": {
+            "direction": "I"
+          },
+          "winc": {
+            "direction": "I"
+          },
+          "READY": {
+            "direction": "O"
+          }
+        }
+      },
+      "STOP_WRINC_0": {
+        "vlnv": "xilinx.com:module_ref:STOP_WRINC:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_FIFO_test_STOP_WRINC_0_0",
+        "xci_path": "ip\\design_FIFO_test_STOP_WRINC_0_0\\design_FIFO_test_STOP_WRINC_0_0.xci",
+        "inst_hier_path": "STOP_WRINC_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "STOP_WRINC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "wfull": {
+            "direction": "I"
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "winc": {
+            "direction": "O"
+          }
+        }
+      },
+      "fifo2_1": {
+        "vlnv": "xilinx.com:module_ref:fifo2:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_FIFO_test_fifo2_1_0",
+        "xci_path": "ip\\design_FIFO_test_fifo2_1_0\\design_FIFO_test_fifo2_1_0.xci",
+        "inst_hier_path": "fifo2_1",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fifo2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rdata": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "wfull": {
+            "direction": "O"
+          },
+          "rempty": {
+            "direction": "O"
+          },
+          "wdata": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "winc": {
+            "direction": "I"
+          },
+          "wclk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_FIFO_test_clk_100MHz_1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "wrst_n": {
+            "direction": "I"
+          },
+          "rinc": {
+            "direction": "I"
+          },
+          "rclk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_FIFO_test_clk_100MHz",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rrst_n": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "LENGTH_0_rd_out": {
+        "ports": [
+          "LENGTH_0/rd_out",
+          "rd_out_0"
+        ]
+      },
+      "LENGTH_0_rinc": {
+        "ports": [
+          "LENGTH_0/rinc",
+          "fifo2_0/rinc",
+          "READY_CONDITION_0/rinc"
+        ]
+      },
+      "LENGTH_0_winc": {
+        "ports": [
+          "LENGTH_0/winc",
+          "fifo2_1/winc",
+          "READY_CONDITION_0/winc"
+        ]
+      },
+      "LENGTH_0_wr_out": {
+        "ports": [
+          "LENGTH_0/wr_out",
+          "wr_out_0"
+        ]
+      },
+      "RD_0_1": {
+        "ports": [
+          "RD_0",
+          "READY_CONDITION_0/RD",
+          "LENGTH_0/RD"
+        ]
+      },
+      "READY_CONDITION_0_READY": {
+        "ports": [
+          "READY_CONDITION_0/READY",
+          "READY_0"
+        ]
+      },
+      "STOP_WRINC_0_winc": {
+        "ports": [
+          "STOP_WRINC_0/winc",
+          "fifo2_0/winc"
+        ]
+      },
+      "clk_100MHz_1": {
+        "ports": [
+          "clk_100MHz",
+          "clk_wiz_req/clk_in1",
+          "fifo2_1/rclk"
+        ]
+      },
+      "clk_100MHz_1_1": {
+        "ports": [
+          "clk_50MHz_1",
+          "clk_wiz_com/clk_in1",
+          "fifo2_1/wclk"
+        ]
+      },
+      "clk_wiz_com_clk_out1": {
+        "ports": [
+          "clk_wiz_com/clk_out1",
+          "fifo2_0/rclk",
+          "LENGTH_0/clk"
+        ]
+      },
+      "clk_wiz_com_locked": {
+        "ports": [
+          "clk_wiz_com/locked",
+          "locked_1"
+        ]
+      },
+      "clk_wiz_req_clk_out1": {
+        "ports": [
+          "clk_wiz_req/clk_out1",
+          "fifo2_0/wclk"
+        ]
+      },
+      "clk_wiz_req_locked": {
+        "ports": [
+          "clk_wiz_req/locked",
+          "locked_0"
+        ]
+      },
+      "fifo2_0_rdata": {
+        "ports": [
+          "fifo2_0/rdata",
+          "rdata_0"
+        ]
+      },
+      "fifo2_0_rempty": {
+        "ports": [
+          "fifo2_0/rempty",
+          "rempty_0",
+          "LENGTH_0/rempty"
+        ]
+      },
+      "fifo2_0_wfull": {
+        "ports": [
+          "fifo2_0/wfull",
+          "wfull_0",
+          "STOP_WRINC_0/wfull",
+          "READY_CONDITION_0/wfull"
+        ]
+      },
+      "fifo2_1_rdata": {
+        "ports": [
+          "fifo2_1/rdata",
+          "rdata_1"
+        ]
+      },
+      "fifo2_1_rempty": {
+        "ports": [
+          "fifo2_1/rempty",
+          "rempty_1",
+          "READY_CONDITION_0/rempty"
+        ]
+      },
+      "fifo2_1_wfull": {
+        "ports": [
+          "fifo2_1/wfull",
+          "wfull_1",
+          "LENGTH_0/wfull"
+        ]
+      },
+      "length_0_1": {
+        "ports": [
+          "length_0",
+          "LENGTH_0/length"
+        ]
+      },
+      "reset_rtl_0_0_1": {
+        "ports": [
+          "reset_rtl_0_0",
+          "clk_wiz_com/resetn"
+        ]
+      },
+      "reset_rtl_0_1": {
+        "ports": [
+          "reset_rtl_0",
+          "clk_wiz_req/resetn"
+        ]
+      },
+      "rinc_0_1": {
+        "ports": [
+          "rinc_0",
+          "fifo2_1/rinc"
+        ]
+      },
+      "rrst_n_0_1": {
+        "ports": [
+          "rrst_n_0",
+          "fifo2_0/rrst_n",
+          "fifo2_1/rrst_n"
+        ]
+      },
+      "wdata_0_1": {
+        "ports": [
+          "wdata_0",
+          "fifo2_0/wdata"
+        ]
+      },
+      "wdata_1_1": {
+        "ports": [
+          "wdata_1",
+          "fifo2_1/wdata"
+        ]
+      },
+      "winc_0_1": {
+        "ports": [
+          "winc_0",
+          "STOP_WRINC_0/wr",
+          "READY_CONDITION_0/WR",
+          "LENGTH_0/WR"
+        ]
+      },
+      "wrst_n_0_1": {
+        "ports": [
+          "wrst_n_0",
+          "fifo2_0/wrst_n",
+          "fifo2_1/wrst_n",
+          "LENGTH_0/rst_n"
+        ]
+      }
+    }
+  }
+}

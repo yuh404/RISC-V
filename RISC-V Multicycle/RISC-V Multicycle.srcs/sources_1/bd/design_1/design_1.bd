@@ -1,0 +1,1084 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x4358BB961ACF8727",
+      "device": "xc7a12ticsg325-1L",
+      "gen_directory": "../../../../RISC-V Multicycle.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "PC_0": "",
+      "Mux_AddSrc_0": "",
+      "Ins_Data_Memory_0": "",
+      "Register_0": "",
+      "Register_IRWrite_1": "",
+      "Register_File_0": "",
+      "Extend_0": "",
+      "Register_1": "",
+      "Register_2": "",
+      "MUX_ALUSrc_0": "",
+      "MUX_ALUSrc_1": "",
+      "ALU_0": "",
+      "Register_3": "",
+      "MUX_ResultSrc_0": "",
+      "Multicycle_Control_U_0": "",
+      "clk_wiz_0": "",
+      "proc_sys_reset_0": ""
+    },
+    "ports": {
+      "S10_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "Carry_0": {
+        "direction": "O"
+      },
+      "Overflow_0": {
+        "direction": "O"
+      },
+      "Negative_0": {
+        "direction": "O"
+      },
+      "StateDebug_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "locked_0": {
+        "direction": "O"
+      },
+      "clk_in1_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      }
+    },
+    "components": {
+      "PC_0": {
+        "vlnv": "xilinx.com:module_ref:PC:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_PC_0_0",
+        "xci_path": "ip\\design_1_PC_0_0\\design_1_PC_0_0.xci",
+        "inst_hier_path": "PC_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "PC_next": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "PCWrite": {
+            "direction": "I"
+          },
+          "PC": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Mux_AddSrc_0": {
+        "vlnv": "xilinx.com:module_ref:Mux_AddSrc:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Mux_AddSrc_0_0",
+        "xci_path": "ip\\design_1_Mux_AddSrc_0_0\\design_1_Mux_AddSrc_0_0.xci",
+        "inst_hier_path": "Mux_AddSrc_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux_AddSrc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "PC": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ResultSrc": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "AdrSrc": {
+            "direction": "I"
+          },
+          "ADR": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Ins_Data_Memory_0": {
+        "vlnv": "xilinx.com:module_ref:Ins_Data_Memory:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Ins_Data_Memory_0_0",
+        "xci_path": "ip\\design_1_Ins_Data_Memory_0_0\\design_1_Ins_Data_Memory_0_0.xci",
+        "inst_hier_path": "Ins_Data_Memory_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Ins_Data_Memory",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "WE": {
+            "direction": "I"
+          },
+          "Address": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "WD": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "RD": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Register_0": {
+        "vlnv": "xilinx.com:module_ref:Register:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Register_0_0",
+        "xci_path": "ip\\design_1_Register_0_0\\design_1_Register_0_0.xci",
+        "inst_hier_path": "Register_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Register",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "RD": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Address": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Register_IRWrite_1": {
+        "vlnv": "xilinx.com:module_ref:Register_IRWrite:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Register_IRWrite_1_0",
+        "xci_path": "ip\\design_1_Register_IRWrite_1_0\\design_1_Register_IRWrite_1_0.xci",
+        "inst_hier_path": "Register_IRWrite_1",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Register_IRWrite",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "IRWrite": {
+            "direction": "I"
+          },
+          "RD": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "PC": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Instruction": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "OldPC": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Register_File_0": {
+        "vlnv": "xilinx.com:module_ref:Register_File:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Register_File_0_0",
+        "xci_path": "ip\\design_1_Register_File_0_0\\design_1_Register_File_0_0.xci",
+        "inst_hier_path": "Register_File_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Register_File",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "RegWrite": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "Instruction": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "WD3": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "RD1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "RD2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Extend_0": {
+        "vlnv": "xilinx.com:module_ref:Extend:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Extend_0_0",
+        "xci_path": "ip\\design_1_Extend_0_0\\design_1_Extend_0_0.xci",
+        "inst_hier_path": "Extend_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Extend",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Instruction": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ImmSrc": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "ImmExt": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Register_1": {
+        "vlnv": "xilinx.com:module_ref:Register:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Register_1_0",
+        "xci_path": "ip\\design_1_Register_1_0\\design_1_Register_1_0.xci",
+        "inst_hier_path": "Register_1",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Register",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "RD": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Address": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Register_2": {
+        "vlnv": "xilinx.com:module_ref:Register:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Register_2_0",
+        "xci_path": "ip\\design_1_Register_2_0\\design_1_Register_2_0.xci",
+        "inst_hier_path": "Register_2",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Register",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "RD": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Address": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "MUX_ALUSrc_0": {
+        "vlnv": "xilinx.com:module_ref:MUX_ALUSrc:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_MUX_ALUSrc_0_0",
+        "xci_path": "ip\\design_1_MUX_ALUSrc_0_0\\design_1_MUX_ALUSrc_0_0.xci",
+        "inst_hier_path": "MUX_ALUSrc_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MUX_ALUSrc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "S00": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "S01": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "S10": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ALUSrc": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "Src": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "MUX_ALUSrc_1": {
+        "vlnv": "xilinx.com:module_ref:MUX_ALUSrc:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_MUX_ALUSrc_1_0",
+        "xci_path": "ip\\design_1_MUX_ALUSrc_1_0\\design_1_MUX_ALUSrc_1_0.xci",
+        "inst_hier_path": "MUX_ALUSrc_1",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MUX_ALUSrc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "S00": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "S01": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "S10": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ALUSrc": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "Src": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "ALU_0": {
+        "vlnv": "xilinx.com:module_ref:ALU:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_ALU_0_0",
+        "xci_path": "ip\\design_1_ALU_0_0\\design_1_ALU_0_0.xci",
+        "inst_hier_path": "ALU_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ALU",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "SrcA": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "SrcB": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ALUControl": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "ALUResult": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "Carry": {
+            "direction": "O"
+          },
+          "Overflow": {
+            "direction": "O"
+          },
+          "Negative": {
+            "direction": "O"
+          },
+          "Zero": {
+            "direction": "O"
+          }
+        }
+      },
+      "Register_3": {
+        "vlnv": "xilinx.com:module_ref:Register:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Register_3_0",
+        "xci_path": "ip\\design_1_Register_3_0\\design_1_Register_3_0.xci",
+        "inst_hier_path": "Register_3",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Register",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "RD": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Address": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "MUX_ResultSrc_0": {
+        "vlnv": "xilinx.com:module_ref:MUX_ResultSrc:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_MUX_ResultSrc_0_0",
+        "xci_path": "ip\\design_1_MUX_ResultSrc_0_0\\design_1_MUX_ResultSrc_0_0.xci",
+        "inst_hier_path": "MUX_ResultSrc_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MUX_ResultSrc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ResultSrc": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "ALUResult": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ReadData": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "PC": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Result": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Multicycle_Control_U_0": {
+        "vlnv": "xilinx.com:module_ref:Multicycle_Control_Unit:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Multicycle_Control_U_0_0",
+        "xci_path": "ip\\design_1_Multicycle_Control_U_0_0\\design_1_Multicycle_Control_U_0_0.xci",
+        "inst_hier_path": "Multicycle_Control_U_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Multicycle_Control_Unit",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "Instruction": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Zero": {
+            "direction": "I"
+          },
+          "PCWrite": {
+            "direction": "O"
+          },
+          "AdrSrc": {
+            "direction": "O"
+          },
+          "MemWrite": {
+            "direction": "O"
+          },
+          "IRWrite": {
+            "direction": "O"
+          },
+          "RegWrite": {
+            "direction": "O"
+          },
+          "ResultSrc": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "ALUSrcA": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "ALUSrcB": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "ImmSrc": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "ALUControl": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "StateDebug": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "17",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "has_run_ip_tcl": "true"
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "17",
+        "xci_name": "design_1_proc_sys_reset_0_0",
+        "xci_path": "ip\\design_1_proc_sys_reset_0_0\\design_1_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0",
+        "has_run_ip_tcl": "true"
+      }
+    },
+    "nets": {
+      "ALU_0_ALUResult": {
+        "ports": [
+          "ALU_0/ALUResult",
+          "Register_3/RD",
+          "MUX_ResultSrc_0/PC"
+        ]
+      },
+      "ALU_0_Carry": {
+        "ports": [
+          "ALU_0/Carry",
+          "Carry_0"
+        ]
+      },
+      "ALU_0_Negative": {
+        "ports": [
+          "ALU_0/Negative",
+          "Negative_0"
+        ]
+      },
+      "ALU_0_Overflow": {
+        "ports": [
+          "ALU_0/Overflow",
+          "Overflow_0"
+        ]
+      },
+      "ALU_0_Zero": {
+        "ports": [
+          "ALU_0/Zero",
+          "Multicycle_Control_U_0/Zero"
+        ]
+      },
+      "Extend_0_ImmExt": {
+        "ports": [
+          "Extend_0/ImmExt",
+          "MUX_ALUSrc_1/S01"
+        ]
+      },
+      "Ins_Data_Memory_0_RD": {
+        "ports": [
+          "Ins_Data_Memory_0/RD",
+          "Register_IRWrite_1/RD",
+          "Register_0/RD"
+        ]
+      },
+      "MUX_ALUSrc_0_Src": {
+        "ports": [
+          "MUX_ALUSrc_0/Src",
+          "ALU_0/SrcA"
+        ]
+      },
+      "MUX_ALUSrc_1_Src": {
+        "ports": [
+          "MUX_ALUSrc_1/Src",
+          "ALU_0/SrcB"
+        ]
+      },
+      "MUX_ResultSrc_0_Result": {
+        "ports": [
+          "MUX_ResultSrc_0/Result",
+          "PC_0/PC_next",
+          "Register_File_0/WD3",
+          "Mux_AddSrc_0/ResultSrc"
+        ]
+      },
+      "Multicycle_Control_U_0_ALUControl": {
+        "ports": [
+          "Multicycle_Control_U_0/ALUControl",
+          "ALU_0/ALUControl"
+        ]
+      },
+      "Multicycle_Control_U_0_ALUSrcA": {
+        "ports": [
+          "Multicycle_Control_U_0/ALUSrcA",
+          "MUX_ALUSrc_0/ALUSrc"
+        ]
+      },
+      "Multicycle_Control_U_0_ALUSrcB": {
+        "ports": [
+          "Multicycle_Control_U_0/ALUSrcB",
+          "MUX_ALUSrc_1/ALUSrc"
+        ]
+      },
+      "Multicycle_Control_U_0_AdrSrc": {
+        "ports": [
+          "Multicycle_Control_U_0/AdrSrc",
+          "Mux_AddSrc_0/AdrSrc"
+        ]
+      },
+      "Multicycle_Control_U_0_IRWrite": {
+        "ports": [
+          "Multicycle_Control_U_0/IRWrite",
+          "Register_IRWrite_1/IRWrite"
+        ]
+      },
+      "Multicycle_Control_U_0_ImmSrc": {
+        "ports": [
+          "Multicycle_Control_U_0/ImmSrc",
+          "Extend_0/ImmSrc"
+        ]
+      },
+      "Multicycle_Control_U_0_MemWrite": {
+        "ports": [
+          "Multicycle_Control_U_0/MemWrite",
+          "Ins_Data_Memory_0/WE"
+        ]
+      },
+      "Multicycle_Control_U_0_PCWrite": {
+        "ports": [
+          "Multicycle_Control_U_0/PCWrite",
+          "PC_0/PCWrite"
+        ]
+      },
+      "Multicycle_Control_U_0_RegWrite": {
+        "ports": [
+          "Multicycle_Control_U_0/RegWrite",
+          "Register_File_0/RegWrite"
+        ]
+      },
+      "Multicycle_Control_U_0_ResultSrc": {
+        "ports": [
+          "Multicycle_Control_U_0/ResultSrc",
+          "MUX_ResultSrc_0/ResultSrc"
+        ]
+      },
+      "Multicycle_Control_U_0_StateDebug": {
+        "ports": [
+          "Multicycle_Control_U_0/StateDebug",
+          "StateDebug_0"
+        ]
+      },
+      "Mux_AddSrc_0_OUT": {
+        "ports": [
+          "Mux_AddSrc_0/ADR",
+          "Ins_Data_Memory_0/Address"
+        ]
+      },
+      "PC_0_PC": {
+        "ports": [
+          "PC_0/PC",
+          "Register_IRWrite_1/PC",
+          "MUX_ALUSrc_0/S00",
+          "Mux_AddSrc_0/PC"
+        ]
+      },
+      "Register_0_Address": {
+        "ports": [
+          "Register_0/Address",
+          "MUX_ResultSrc_0/ReadData"
+        ]
+      },
+      "Register_1_Address": {
+        "ports": [
+          "Register_1/Address",
+          "MUX_ALUSrc_0/S10"
+        ]
+      },
+      "Register_2_Address": {
+        "ports": [
+          "Register_2/Address",
+          "MUX_ALUSrc_1/S00",
+          "Ins_Data_Memory_0/WD"
+        ]
+      },
+      "Register_3_Address": {
+        "ports": [
+          "Register_3/Address",
+          "MUX_ResultSrc_0/ALUResult"
+        ]
+      },
+      "Register_File_0_RD1": {
+        "ports": [
+          "Register_File_0/RD1",
+          "Register_1/RD"
+        ]
+      },
+      "Register_File_0_RD2": {
+        "ports": [
+          "Register_File_0/RD2",
+          "Register_2/RD"
+        ]
+      },
+      "Register_IRWrite_1_Instruction": {
+        "ports": [
+          "Register_IRWrite_1/Instruction",
+          "Register_File_0/Instruction",
+          "Extend_0/Instruction",
+          "Multicycle_Control_U_0/Instruction"
+        ]
+      },
+      "Register_IRWrite_1_OldPC": {
+        "ports": [
+          "Register_IRWrite_1/OldPC",
+          "MUX_ALUSrc_0/S01"
+        ]
+      },
+      "S10_0_1": {
+        "ports": [
+          "S10_0",
+          "MUX_ALUSrc_1/S10"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "clk_in1_0",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "PC_0/clk",
+          "Register_IRWrite_1/clk",
+          "Register_0/clk",
+          "Register_File_0/clk",
+          "Register_1/clk",
+          "Register_2/clk",
+          "Multicycle_Control_U_0/clk",
+          "Register_3/clk",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "Ins_Data_Memory_0/clk"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "locked_0",
+          "proc_sys_reset_0/dcm_locked"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_reset": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_reset",
+          "PC_0/rst",
+          "Multicycle_Control_U_0/rst"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst_0",
+          "proc_sys_reset_0/ext_reset_in",
+          "clk_wiz_0/reset"
+        ]
+      }
+    }
+  }
+}

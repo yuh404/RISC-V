@@ -1,0 +1,762 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xFF4FB9BF0D993CF6",
+      "device": "xc7a12ticsg325-1L",
+      "gen_directory": "../../../../RISCY-V.gen/sources_1/bd/RISC_V",
+      "name": "RISC_V",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Control_Unit_0": "",
+      "ALU_0": "",
+      "Data_Memory_0": "",
+      "Extend_0": "",
+      "Instruction_Memory_0": "",
+      "MUX_PC_0": "",
+      "MUX_ResultSrc_0": "",
+      "Mux_ALUSrc_0": "",
+      "PC_0": "",
+      "PCTarget_0": "",
+      "PC_counter_0": "",
+      "Register_File_0": "",
+      "clk_wiz_0": ""
+    },
+    "ports": {
+      "locked_0": {
+        "direction": "O"
+      },
+      "clk_in1_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "RISC_V_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "Carry_0": {
+        "direction": "O"
+      },
+      "Overflow_0": {
+        "direction": "O"
+      },
+      "Negative_0": {
+        "direction": "O"
+      },
+      "clk_rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "pc_rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      }
+    },
+    "components": {
+      "Control_Unit_0": {
+        "vlnv": "xilinx.com:module_ref:Control_Unit:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_Control_Unit_0_0",
+        "xci_path": "ip\\RISC_V_Control_Unit_0_0\\RISC_V_Control_Unit_0_0.xci",
+        "inst_hier_path": "Control_Unit_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Control_Unit",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Instruction": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Zero": {
+            "direction": "I"
+          },
+          "PCSrc": {
+            "direction": "O"
+          },
+          "ResultSrc": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "MemWrite": {
+            "direction": "O"
+          },
+          "ALUControl": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "ALUSrc": {
+            "direction": "O"
+          },
+          "ImmSrc": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "RegWrite": {
+            "direction": "O"
+          }
+        }
+      },
+      "ALU_0": {
+        "vlnv": "xilinx.com:module_ref:ALU:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_ALU_0_0",
+        "xci_path": "ip\\RISC_V_ALU_0_0\\RISC_V_ALU_0_0.xci",
+        "inst_hier_path": "ALU_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ALU",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "SrcA": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "SrcB": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ALUControl": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "ALUResult": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "Carry": {
+            "direction": "O"
+          },
+          "Overflow": {
+            "direction": "O"
+          },
+          "Negative": {
+            "direction": "O"
+          },
+          "Zero": {
+            "direction": "O"
+          }
+        }
+      },
+      "Data_Memory_0": {
+        "vlnv": "xilinx.com:module_ref:Data_Memory:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_Data_Memory_0_0",
+        "xci_path": "ip\\RISC_V_Data_Memory_0_0\\RISC_V_Data_Memory_0_0.xci",
+        "inst_hier_path": "Data_Memory_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Data_Memory",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "WE": {
+            "direction": "I"
+          },
+          "Address": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "WD": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "RD": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Extend_0": {
+        "vlnv": "xilinx.com:module_ref:Extend:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_Extend_0_0",
+        "xci_path": "ip\\RISC_V_Extend_0_0\\RISC_V_Extend_0_0.xci",
+        "inst_hier_path": "Extend_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Extend",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Instruction": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ImmSrc": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "ImmExt": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Instruction_Memory_0": {
+        "vlnv": "xilinx.com:module_ref:Instruction_Memory:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_Instruction_Memory_0_0",
+        "xci_path": "ip\\RISC_V_Instruction_Memory_0_0\\RISC_V_Instruction_Memory_0_0.xci",
+        "inst_hier_path": "Instruction_Memory_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Instruction_Memory",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Address": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "RD": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "MUX_PC_0": {
+        "vlnv": "xilinx.com:module_ref:MUX_PC:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_MUX_PC_0_0",
+        "xci_path": "ip\\RISC_V_MUX_PC_0_0\\RISC_V_MUX_PC_0_0.xci",
+        "inst_hier_path": "MUX_PC_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MUX_PC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "PCPlus4": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "PCTarget": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "PCSrc": {
+            "direction": "I"
+          },
+          "PCNext": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "MUX_ResultSrc_0": {
+        "vlnv": "xilinx.com:module_ref:MUX_ResultSrc:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_MUX_ResultSrc_0_0",
+        "xci_path": "ip\\RISC_V_MUX_ResultSrc_0_0\\RISC_V_MUX_ResultSrc_0_0.xci",
+        "inst_hier_path": "MUX_ResultSrc_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MUX_ResultSrc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ResultSrc": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "ALUResult": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ReadData": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "PCPlus4": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Result": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Mux_ALUSrc_0": {
+        "vlnv": "xilinx.com:module_ref:Mux_ALUSrc:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_Mux_ALUSrc_0_0",
+        "xci_path": "ip\\RISC_V_Mux_ALUSrc_0_0\\RISC_V_Mux_ALUSrc_0_0.xci",
+        "inst_hier_path": "Mux_ALUSrc_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux_ALUSrc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ALUSrc": {
+            "direction": "I"
+          },
+          "RD2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Extned": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "SrcB": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "PC_0": {
+        "vlnv": "xilinx.com:module_ref:PC:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_PC_0_0",
+        "xci_path": "ip\\RISC_V_PC_0_0\\RISC_V_PC_0_0.xci",
+        "inst_hier_path": "PC_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "PC_next": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "PC": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "PCTarget_0": {
+        "vlnv": "xilinx.com:module_ref:PCTarget:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_PCTarget_0_0",
+        "xci_path": "ip\\RISC_V_PCTarget_0_0\\RISC_V_PCTarget_0_0.xci",
+        "inst_hier_path": "PCTarget_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PCTarget",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "PC": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Extend": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "PCTarget": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "PC_counter_0": {
+        "vlnv": "xilinx.com:module_ref:PC_counter:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_PC_counter_0_0",
+        "xci_path": "ip\\RISC_V_PC_counter_0_0\\RISC_V_PC_counter_0_0.xci",
+        "inst_hier_path": "PC_counter_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PC_counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "PC": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "PC_next": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Register_File_0": {
+        "vlnv": "xilinx.com:module_ref:Register_File:1.0",
+        "ip_revision": "1",
+        "xci_name": "RISC_V_Register_File_0_0",
+        "xci_path": "ip\\RISC_V_Register_File_0_0\\RISC_V_Register_File_0_0.xci",
+        "inst_hier_path": "Register_File_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Register_File",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "RegWrite": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "Instruction": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "WD3": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "RD1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "RD2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "17",
+        "xci_name": "RISC_V_clk_wiz_0_0",
+        "xci_path": "ip\\RISC_V_clk_wiz_0_0\\RISC_V_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "has_run_ip_tcl": "true"
+      }
+    },
+    "nets": {
+      "ALU_0_ALUResult": {
+        "ports": [
+          "ALU_0/ALUResult",
+          "MUX_ResultSrc_0/ALUResult",
+          "Data_Memory_0/Address"
+        ]
+      },
+      "ALU_0_Carry": {
+        "ports": [
+          "ALU_0/Carry",
+          "Carry_0"
+        ]
+      },
+      "ALU_0_Negative": {
+        "ports": [
+          "ALU_0/Negative",
+          "Negative_0"
+        ]
+      },
+      "ALU_0_Overflow": {
+        "ports": [
+          "ALU_0/Overflow",
+          "Overflow_0"
+        ]
+      },
+      "ALU_0_Zero": {
+        "ports": [
+          "ALU_0/Zero",
+          "Control_Unit_0/Zero"
+        ]
+      },
+      "Control_Unit_0_ALUControl": {
+        "ports": [
+          "Control_Unit_0/ALUControl",
+          "ALU_0/ALUControl"
+        ]
+      },
+      "Control_Unit_0_ALUSrc": {
+        "ports": [
+          "Control_Unit_0/ALUSrc",
+          "Mux_ALUSrc_0/ALUSrc"
+        ]
+      },
+      "Control_Unit_0_ImmSrc": {
+        "ports": [
+          "Control_Unit_0/ImmSrc",
+          "Extend_0/ImmSrc"
+        ]
+      },
+      "Control_Unit_0_MemWrite": {
+        "ports": [
+          "Control_Unit_0/MemWrite",
+          "Data_Memory_0/WE"
+        ]
+      },
+      "Control_Unit_0_PCSrc": {
+        "ports": [
+          "Control_Unit_0/PCSrc",
+          "MUX_PC_0/PCSrc"
+        ]
+      },
+      "Control_Unit_0_RegWrite": {
+        "ports": [
+          "Control_Unit_0/RegWrite",
+          "Register_File_0/RegWrite"
+        ]
+      },
+      "Control_Unit_0_ResultSrc": {
+        "ports": [
+          "Control_Unit_0/ResultSrc",
+          "MUX_ResultSrc_0/ResultSrc"
+        ]
+      },
+      "Data_Memory_0_RD": {
+        "ports": [
+          "Data_Memory_0/RD",
+          "MUX_ResultSrc_0/ReadData"
+        ]
+      },
+      "Extend_0_ImmExt": {
+        "ports": [
+          "Extend_0/ImmExt",
+          "Mux_ALUSrc_0/Extned",
+          "PCTarget_0/Extend"
+        ]
+      },
+      "Instruction_Memory_0_RD": {
+        "ports": [
+          "Instruction_Memory_0/RD",
+          "Extend_0/Instruction",
+          "Register_File_0/Instruction",
+          "Control_Unit_0/Instruction"
+        ]
+      },
+      "MUX_PC_0_PCNext": {
+        "ports": [
+          "MUX_PC_0/PCNext",
+          "PC_0/PC_next"
+        ]
+      },
+      "MUX_ResultSrc_0_WD": {
+        "ports": [
+          "MUX_ResultSrc_0/Result",
+          "Register_File_0/WD3"
+        ]
+      },
+      "Mux_ALUSrc_0_SrcB": {
+        "ports": [
+          "Mux_ALUSrc_0/SrcB",
+          "ALU_0/SrcB"
+        ]
+      },
+      "PCTarget_0_PCTarget": {
+        "ports": [
+          "PCTarget_0/PCTarget",
+          "MUX_PC_0/PCTarget"
+        ]
+      },
+      "PC_0_PC": {
+        "ports": [
+          "PC_0/PC",
+          "PC_counter_0/PC",
+          "PCTarget_0/PC",
+          "Instruction_Memory_0/Address"
+        ]
+      },
+      "PC_counter_0_PC_next": {
+        "ports": [
+          "PC_counter_0/PC_next",
+          "MUX_PC_0/PCPlus4",
+          "MUX_ResultSrc_0/PCPlus4"
+        ]
+      },
+      "Register_File_0_RD1": {
+        "ports": [
+          "Register_File_0/RD1",
+          "ALU_0/SrcA"
+        ]
+      },
+      "Register_File_0_RD2": {
+        "ports": [
+          "Register_File_0/RD2",
+          "Mux_ALUSrc_0/RD2",
+          "Data_Memory_0/WD"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "clk_in1_0",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "PC_0/clk",
+          "Register_File_0/clk",
+          "Data_Memory_0/clk"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "locked_0"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "clk_rst",
+          "clk_wiz_0/reset"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "pc_rst",
+          "PC_0/rst"
+        ]
+      }
+    }
+  }
+}
